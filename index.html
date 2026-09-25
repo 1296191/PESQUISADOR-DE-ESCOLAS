@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Localizador de escolas de Belo Horizonte">
+  <title>BH Escolas | Localizador</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="brand">
+    <div class="logo">BH</div>
+    <div><strong>BH Escolas</strong><small>Localizador educacional</small></div>
+  </div>
+  <div class="header-city">Belo Horizonte • MG</div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">LOCALIZADOR DE ESCOLAS</span>
+    <h1>Qual escola fica mais perto da sua casa?</h1>
+    <p>Informe seu endereço e veja no mapa as escolas próximas, com tempo estimado de deslocamento.</p>
+    <form id="addressForm" class="search-box">
+      <div class="address-input"><span>⌖</span><input id="address" required placeholder="Digite seu endereço em Belo Horizonte"></div>
+      <button type="submit">Encontrar escolas</button>
+    </form>
+    <button id="geoBtn" class="geo-btn" type="button">📍 Usar minha localização</button>
+    <div id="status" class="status" aria-live="polite"></div>
+  </div>
+</section>
+
+<main class="main">
+  <aside class="results-panel">
+    <div class="panel-head">
+      <div><small>ESCOLAS PRÓXIMAS</small><h2 id="resultTitle">Informe seu endereço</h2></div>
+      <select id="mode" aria-label="Modo de deslocamento">
+        <option value="driving">🚗 Carro</option>
+        <option value="foot">🚶 A pé</option>
+      </select>
+    </div>
+    <div class="filters">
+      <select id="rede"><option value="">Todas as redes</option><option>Municipal</option><option>Estadual</option><option>Federal</option><option>Privada</option></select>
+      <select id="etapa"><option value="">Todas as etapas</option><option>Educação Infantil</option><option>Ensino Fundamental</option><option>Ensino Médio</option><option>EJA</option></select>
+    </div>
+    <div id="results" class="results">
+      <div class="empty"><div class="empty-icon">⌖</div><strong>Comece pela sua localização</strong><p>Digite seu endereço para descobrir quanto tempo leva até as escolas próximas.</p></div>
+    </div>
+  </aside>
+
+  <section class="map-wrap">
+    <div id="map"></div>
+    <div class="map-card"><strong id="mapOrigin">Sua localização</strong><span>● origem da pesquisa</span></div>
+    <div class="legend"><b>Legenda</b><span><i class="dot municipal"></i> Municipal</span><span><i class="dot estadual"></i> Estadual</span><span><i class="dot federal"></i> Federal</span><span><i class="dot privada"></i> Privada</span></div>
+  </section>
+</main>
+
+<footer><span>BH Escolas • Projeto demonstrativo</span><span>Mapa © OpenStreetMap contributors</span></footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

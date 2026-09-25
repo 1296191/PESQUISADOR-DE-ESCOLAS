@@ -1,0 +1,7 @@
+{
+  "type":"FeatureCollection",
+  "features":[
+    {"type":"Feature","properties":{"nome":"ESCOLA EXEMPLO CENTRO","endereco":"Praça Sete","bairro":"Centro","regional":"Centro-Sul","rede":"Municipal","etapa":"Ensino Fundamental"},"geometry":{"type":"Point","coordinates":[-43.9378,-19.9191]}},
+    {"type":"Feature","properties":{"nome":"ESCOLA EXEMPLO PAMPULHA","endereco":"Av. Antônio Carlos","bairro":"Pampulha","regional":"Pampulha","rede":"Municipal","etapa":"Ensino Fundamental"},"geometry":{"type":"Point","coordinates":[-43.9660,-19.8660]}}
+  ]
+}
